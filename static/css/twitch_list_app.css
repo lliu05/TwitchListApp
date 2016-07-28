@@ -1,0 +1,113 @@
+body {
+  background-color: #F79F81;
+  font-family: Arial;
+}
+
+.main {
+  background-color: #F7F2E0;
+  width: 450px;
+  position: relative;
+  padding-bottom: 30px;
+  margin: 70px auto;
+}
+
+.menu {
+  text-align: center;
+  background-color: #CEE3F6;
+  margin: -15px;
+  margin-bottom: 10px;
+  padding: 15px;
+  padding-left: 35px;
+  font-size: 22px;
+  color: #7575a3;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 5px;
+  padding-left: 23px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.icon {
+  position: absolute;
+  margin: 31px;
+  margin-left: 0px;
+  font-size: 20px;
+  right: 40px;
+}
+
+.search {
+  text-align: center;
+}
+
+.search_bar {
+  position: relative;
+  width: 350px;
+  line-height: 30px;
+  border-radius: 20px;
+  border: 1px solid #7575a3;
+  outline: none;
+  margin: 25px;
+  position: relative;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.list li {
+  list-style-type: none;
+  padding: 17px;
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.logo {
+  border-radius: 50%;
+  height: 80px;
+  padding-right: 8px;
+  padding-left: 8px;
+  float: left;
+}
+
+.channel_name {
+  line-height: 70px;
+  position: absolute;
+  left: 8px;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #51517b;
+}
+
+.status {
+  line-height: 70px;
+  position: absolute;
+  right: 45px;
+}
+
+.on {
+  color: #00cc99;
+}
+
+.off {
+  color: #ff0066;
+}
+
+.playing {
+  display: block;
+  line-height: 5px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #51517b;
+}
+
+.current_game {
+  color: #ff9900;
+}
+
+footer {
+  text-align: center;
+}

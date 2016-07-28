@@ -1,0 +1,26 @@
+html(ng-app="twitchListApp")
+  body.container(ng-controller='twitchController as twitchList')
+    .main.container
+      ul.menu.nav.nav-pills
+        li(ng-class="{ active:twitchList.tabIsSet(1) }") 
+          a(href="", ng-click="twitchList.setTab(1)") All
+        li(ng-class="{ active:twitchList.tabIsSet(2) }") 
+          a(href="", ng-click="twitchList.setTab(2)") Online
+        li(ng-class="{ active:twitchList.tabIsSet(3) }") 
+          a(href="", ng-click="twitchList.setTab(3)") Offline
+      .search   
+        input.search_bar(ng-model="searchText")
+        i.icon.fa.fa-search
+      .container.channels
+        .row.list(ng-repeat='channel in twitchList.channelArray | filter: searchText')
+          a(href="http://www.twitch.tv/{{channel.name}}", target="_blank", style='text-decoration: none')
+            li
+              img.logo(ng-src='{{channel.image}}')
+              span.channel_name {{channel.name}}
+              span.status
+                i(ng-show="!channel.online").off.fa.fa-exclamation-circle
+                i(ng-show="channel.online").on.fa.fa-check-square
+              span.playing(ng-show="channel.online.game")  playing 
+                span.current_game(ng-show="channel.online.game") {{channel.online.game}}
+  footer
+    p.copyright.text-muted.small Copyright © Luna Web Design Studio 2015. All Rights Reserved
