@@ -17,8 +17,8 @@
       twitchList.channels[channels[i]] =
       {
         name: channels[i],
-        api_stream: 'https://api.twitch.tv/kraken/streams/' + channels[i],
-        api_channel: 'https://api.twitch.tv/kraken/channels/' + channels[i],
+        api_stream: 'https://api.twitch.tv/kraken/streams/' + channels[i] + '?response_type=token&client_id=ghv9j3bobv4tkouzcob2e3p9iuqm825',
+        api_channel: 'https://api.twitch.tv/kraken/channels/' + channels[i] + '?response_type=token&client_id=ghv9j3bobv4tkouzcob2e3p9iuqm825',
         image: "",
         online: "", 
         status: ""
