@@ -1,5 +1,7 @@
 # Use the Twitchtv JSON API
 
+[![Code Climate](https://codeclimate.com/github/lliu05/TwitchListApp/badges/gpa.svg)](https://codeclimate.com/github/lliu05/TwitchListApp)
+
 User Story: I can see whether Free Code Camp is currently streaming on Twitch.tv.
 
 User Story: I can click the status output and be sent directly to the Free Code Camp's Twitch.tv channel.
