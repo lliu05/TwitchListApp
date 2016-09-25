@@ -5,24 +5,28 @@
         var twitchList = this,
             //target users list
             channels = ["FreeCodeCamp", "storbeck", "terakilobyte", "Habathcx",  "RobotCaleb", "thomasballinger", "noobs2ninjas", "Beohoff", "MedryBW",  "FotiGames"];
-            twitchList.channels = {};
-            twitchList.channelArray = [];
-            twitchList.allUsers = [];
-            twitchList.onlineUsers = [];
-            twitchList.offlineUsers = [];
-            for (var i = 0; i < channels.length; i++ ) {
-              //build object lists of channels
-              twitchList.channels[channels[i]] =
-              {
-                name: channels[i],
-                stream: 'https://api.twitch.tv/kraken/streams/' + channels[i] + '?response_type=token&client_id=ghv9j3bobv4tkouzcob2e3p9iuqm825',
-                channel: 'https://api.twitch.tv/kraken/channels/' + channels[i] + '?response_type=token&client_id=ghv9j3bobv4tkouzcob2e3p9iuqm825',
-                image: "",
-                online: "", 
-                status: ""
-              }
+        
+        //app structure
+        twitchList.channels = {};
+        twitchList.channelArray = [];
+        twitchList.allUsers = [];
+        twitchList.onlineUsers = [];
+        twitchList.offlineUsers = [];
+
+        for (var i = 0; i < channels.length; i++ ) {
+          //build object lists of channels
+          twitchList.channels[channels[i]] =
+          {
+            name: channels[i],
+            stream: 'https://api.twitch.tv/kraken/streams/' + channels[i] + '?response_type=token&client_id=ghv9j3bobv4tkouzcob2e3p9iuqm825',
+            channel: 'https://api.twitch.tv/kraken/channels/' + channels[i] + '?response_type=token&client_id=ghv9j3bobv4tkouzcob2e3p9iuqm825',
+            image: "",
+            online: "", 
+            status: ""
+          }
         }  
-    
+        
+        //get user logo
         function getImage (theData) {
             if (theData.data.logo) {
                 twitchList.channels[theData.data.display_name].image = theData.data.logo;
@@ -30,7 +34,8 @@
                 twitchList.channels[theData.data.display_name].image = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRG9bACQ_YrbUGLe1cCOqcLdNdweXMNsJk0LHKlQtZhY0PUoOBC";    
             }
         }   
-
+        
+        //get user stream
         function getStream (theData) {
             var channelTestRegex = /([^/]*)$/g;
             var channelTest = theData.data._links.self.match(channelTestRegex).join("");
@@ -49,7 +54,7 @@
             var requestImg = $http.get(twitchList.channels[channel].channel);
             requestImg.then(getImage); 
           
-            //get user stream
+            //get user streams
             var request = $http.get(twitchList.channels[channel].stream);       
             request.then(getStream);          
         }  
