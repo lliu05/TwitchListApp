@@ -33,7 +33,7 @@ body {
 .icon {
   position: absolute;
   margin: 31px;
-  margin-left: 0px;
+  margin-left: 0;
   font-size: 20px;
   right: 40px;
 }
