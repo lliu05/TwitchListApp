@@ -1,0 +1,21 @@
+{
+  "name": "TwitchListApp",
+  "version": "0.0.0",
+  "description": "User Story: I can see whether Free Code Camp is currently streaming on Twitch.tv.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lliu05/TwitchListApp.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/lliu05/TwitchListApp/issues"
+  },
+  "dependencies": {
+    "express": "~4.14.0"
+  }
+}
